@@ -9,6 +9,8 @@ const Hero: React.FC = () => {
         { text: 'Social Good', active: false },
     ];
 
+
+
     return (
         <section className="relative min-h-[90vh] flex flex-col items-center justify-center bg-[#1A1A1A] overflow-hidden px-4 pt-20">
 
@@ -70,7 +72,7 @@ const Hero: React.FC = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{
                     opacity: 1,
-                    y: [0, -15, 0], // Движение вверх-вниз
+                    y: [0, -25, 0], // Движение вверх-вниз
                 }}
                 transition={{
                     opacity: { duration: 1.5 },
@@ -82,7 +84,7 @@ const Hero: React.FC = () => {
                 }}
             >
                 <img
-                    src="/mountain.svg"
+                    src="/"
                     alt="Abstract Mountain"
                     className="w-full h-auto object-cover opacity-80"
                     style={{ filter: 'drop-shadow(0 -10px 20px rgba(197,255,50,0.05))' }}
