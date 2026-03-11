@@ -5,6 +5,9 @@ import LogosSection from "../components/LogosSection";
 import ServicesHeader from "../components/ServicesHeader.tsx";
 import ServicesGrid from "../components/ServicesGrid.tsx";
 import WhyChooseHeader from "../components/WhyChooseHeader.tsx";
+import WhyChooseGrid from "../components/WhyChooseGrid.tsx";
+import TestimonialsHeader from "../components/TestimonialsHeader.tsx";
+import TestimonialsGrid from "../components/TestimonialsGrid.tsx";
 
 export default function HomePage() {
     return (
@@ -15,6 +18,9 @@ export default function HomePage() {
             <ServicesHeader/>
             <ServicesGrid/>
             <WhyChooseHeader/>
+            <WhyChooseGrid/>
+            <TestimonialsHeader/>
+            <TestimonialsGrid/>
             <Footer />
         </>
     )
