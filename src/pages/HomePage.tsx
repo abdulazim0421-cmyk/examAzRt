@@ -4,6 +4,7 @@ import Hero from "../components/Hero"
 import LogosSection from "../components/LogosSection";
 import ServicesHeader from "../components/ServicesHeader.tsx";
 import ServicesGrid from "../components/ServicesGrid.tsx";
+import WhyChooseHeader from "../components/WhyChooseHeader.tsx";
 
 export default function HomePage() {
     return (
@@ -13,6 +14,7 @@ export default function HomePage() {
             <LogosSection/>
             <ServicesHeader/>
             <ServicesGrid/>
+            <WhyChooseHeader/>
             <Footer />
         </>
     )
