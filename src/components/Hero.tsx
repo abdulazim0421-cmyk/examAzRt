@@ -84,7 +84,7 @@ const Hero: React.FC = () => {
                 }}
             >
                 <img
-                    src="/"
+                        src="/He/mountain.svg"
                     alt="Abstract Mountain"
                     className="w-full h-auto object-cover opacity-80"
                     style={{ filter: 'drop-shadow(0 -10px 20px rgba(197,255,50,0.05))' }}

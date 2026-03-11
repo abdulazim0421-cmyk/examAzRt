@@ -10,56 +10,46 @@ const brands = [
     { name: 'Adobe', src: '/logos/adobe.svg' },
 ];
 
-// Удваиваем массив для бесконечного эффекта
 const doubledBrands = [...brands, ...brands];
 
 const LogosSection: React.FC = () => {
     return (
-        <section className="bg-[#1A1A1A] py-16 relative overflow-hidden">
+        <section className="bg-[#1A1A1A] pt-16 pb-10 relative overflow-hidden">
 
-            {/* Надпись-бейдж */}
-            <div className="flex justify-center mb-16">
-                <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="bg-[#262626]/80 backdrop-blur-sm border border-[#333333] px-6 py-2.5 rounded-full"
-                >
-          <span className="text-gray-300 text-sm font-medium tracking-wide">
-            Trusted By 250+ Companies
-          </span>
-                </motion.div>
-            </div>
+            {/* Контейнер ленты с линиями */}
+            <div className="relative border-y border-[#262626] bg-[#1C1C1C]/30 flex items-center">
 
-            {/* Контейнер ленты */}
-            <div className="relative border-y border-[#262626] py-10 bg-[#1C1C1C]/50 flex items-center">
+                {/* Надпись-бейдж: текст как в оригинале, но позиционирование на линии */}
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
+                    <div className="bg-[#1A1A1A] border border-[#262626] px-6 py-1.5 rounded-full">
+            <span className="text-gray-300 text-sm font-medium whitespace-nowrap">
+              Trusted By 250+ Companies
+            </span>
+                    </div>
+                </div>
 
-                {/* Градиентные маски по бокам для "глубины" */}
-                <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#1A1A1A] to-transparent z-10" />
-                <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#1A1A1A] to-transparent z-10" />
+                {/* Градиенты для мягкого исчезновения по бокам */}
+                <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#1A1A1A] via-[#1A1A1A]/80 to-transparent z-10" />
+                <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#1A1A1A] via-[#1A1A1A]/80 to-transparent z-10" />
 
                 <motion.div
-                    className="flex gap-24 items-center"
-                    animate={{
-                        x: ["0%", "-50%"] // Двигаем ленту на половину её длины
-                    }}
+                    className="flex py-12 items-center"
+                    animate={{ x: ["0%", "-50%"] }}
                     transition={{
-                        duration: 30, // Скорость (чем больше число, тем медленнее)
+                        duration: 30,
                         ease: "linear",
                         repeat: Infinity
                     }}
-                    // Остановка при наведении — признак профи-подхода
-                    whileHover={{ opacity: 0.8 }}
                 >
                     {doubledBrands.map((brand, index) => (
                         <div
                             key={index}
-                            className="flex-shrink-0 flex items-center justify-center w-[120px] md:w-[150px]"
+                            className="flex-shrink-0 flex items-center justify-center w-36 h-10 mx-10"
                         >
                             <img
                                 src={brand.src}
                                 alt={brand.name}
-                                className="h-8 md:h-9 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer"
+                                className="max-w-full max-h-full w-auto h-auto object-contain opacity-40 grayscale hover:opacity-100 transition-all duration-500"
                             />
                         </div>
                     ))}

@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
             {/* Logo */}
             <div className="flex items-center gap-2">
                 {/* Путь к твоему SVG в папке public */}
-                <img src="/logo.svg" alt="SquareUp Logo" className="w-10 h-10" />
+                <img src="/Logo/logo.svg" alt="SquareUp Logo" className="w-10 h-10" />
                 <span className="text-white font-semibold text-xl tracking-tight">SquareUp</span>
             </div>
 

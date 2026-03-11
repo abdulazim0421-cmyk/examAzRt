@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center mb-10 gap-8">
                     {/* Logo */}
                     <div className="flex items-center gap-2">
-                        <img src="/logo.svg" alt="SquareUp Logo" className="w-10 h-10" />
+                        <img src="/Logo/logo.svg" alt="SquareUp Logo" className="w-10 h-10" />
                         <span className="text-white font-semibold text-xl">SquareUp</span>
                     </div>
 
